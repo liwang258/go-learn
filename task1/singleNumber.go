@@ -1,10 +1,6 @@
-package main
+package task1
 
-import (
-	"fmt"
-)
-
-func singleNumber(nums []int) int {
+func SingleNumber(nums []int) int {
 	var target int
 	record := make(map[int]int)
 	for _, v := range nums {
@@ -22,10 +18,4 @@ func singleNumber(nums []int) int {
 		}
 	}
 	return target
-}
-
-func main() {
-	nums := []int{1, 1, 5, 6, 5}
-	r := singleNumber(nums)
-	fmt.Println(r)
 }
