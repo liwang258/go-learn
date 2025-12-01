@@ -1,104 +1,25 @@
 package main
 
 import (
-	"fmt"
 	"go-learn/task2"
 )
 
 func main() {
-	// nums := []int{1, 1, 5, 6, 5}
-	// r := task1.SingleNumber(nums)
-	// fmt.Println(r)
-	// num := 5
-	// v := task1.IsPalindrome(num)
-	// fmt.Printf("IsPalindrome input %d,result:%v \n", num, v)
+	// input := 10
+	// task2.Add(&input)
+	// fmt.Printf("task.Add input 10,expect 20,result:%d \n", input)
 
-	// num = 10
-	// v = task1.IsPalindrome(num)
-	// fmt.Printf("IsPalindrome input %d,expect:%v, result:%v \n", num, false, v)
+	// arr := make([]int, 0)
+	// arr = append(arr, 1)
+	// arr = append(arr, 2)
+	// arr = append(arr, 3)
+	// v, _ := json.Marshal(arr)
 
-	// num = 12
-	// v = task1.IsPalindrome(num)
-	// fmt.Printf("IsPalindrome input %d,expect:%v, result:%v \n", num, false, v)
-	// num = 11
-	// v = task1.IsPalindrome(num)
-	// fmt.Printf("IsPalindrome input %d,expect:%v, result:%v \n", num, true, v)
+	// task2.SilencOpt(&arr)
 
-	// num = 121
-	// v = task1.IsPalindrome(num)
-	// fmt.Printf("IsPalindrome input %d,expect:%v, result:%v \n", num, true, v)
-	// num = 121121
-	// v = task1.IsPalindrome(num)
-	// fmt.Printf("IsPalindrome input %d,expect:%v, result:%v \n", num, true, v)
+	// r, _ := json.Marshal(arr)
+	// fmt.Printf("before:%s,after:%s", string(v), string(r))
 
-	// input := "()"
-	// v := task1.IsValid(input)
-	// fmt.Printf("IsValid input %s,expect:%v,result:%v \n", input, true, v)
+	task2.Goroutine_Print()
 
-	// input = "(]"
-	// v = task1.IsValid(input)
-	// fmt.Printf("IsValid input %s,expect:%v,result:%v \n", input, false, v)
-
-	// input = ")("
-	// v = task1.IsValid(input)
-	// fmt.Printf("IsValid input %s,expect:%v,result:%v \n", input, false, v)
-
-	// input = "()[](({}))"
-	// v = task1.IsValid(input)
-	// fmt.Printf("IsValid input %s,expect:%v,result:%v \n", input, true, v)
-
-	// digits := []int{9}
-	// input, _ := json.Marshal(digits)
-	// v := task1.PlusOne(digits)
-	// output, _ := json.Marshal(v)
-	// fmt.Printf("input:%s ,result:%s \n", string(input), string(output))
-
-	// digits = []int{9, 8}
-	// input, _ = json.Marshal(digits)
-	// v = task1.PlusOne(digits)
-	// output, _ = json.Marshal(v)
-	// fmt.Printf("input:%s ,result:%s \n", string(input), string(output))
-
-	// digits = []int{9, 9, 9}
-	// input, _ = json.Marshal(digits)
-	// v = task1.PlusOne(digits)
-	// output, _ = json.Marshal(v)
-	// fmt.Printf("input:%s ,result:%s \n", string(input), string(output))
-
-	// digits = []int{8, 9, 9}
-	// input, _ = json.Marshal(digits)
-	// v = task1.PlusOne(digits)
-	// output, _ = json.Marshal(v)
-	// fmt.Printf("input:%s resut:%s \n", string(input), string(output))
-
-	// digits = []int{2, 9, 9}
-	// input, _ = json.Marshal(digits)
-	// v = task1.PlusOne(digits)
-	// output, _ = json.Marshal(v)
-	// fmt.Printf("input:%s resut:%s \n", string(input), string(output))
-
-	// digits := []int{2, 9, 9}
-	// input, _ := json.Marshal(digits)
-	// v := task1.RemoveDuplicates(digits)
-	// fmt.Printf("input:%s expect:%d resut:%d \n", string(input), 2, v)
-
-	// digits = []int{2, 9}
-	// input, _ = json.Marshal(digits)
-	// v = task1.RemoveDuplicates(digits)
-	// fmt.Printf("input:%s expect:%d resut:%d \n", string(input), 2, v)
-
-	// digits = []int{9, 8, 9, 7}
-	// input, _ = json.Marshal(digits)
-	// v = task1.RemoveDuplicates(digits)
-	// fmt.Printf("input:%s expect:%d resut:%d \n", string(input), 3, v)
-
-	// digits = []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
-	// input, _ = json.Marshal(digits)
-	// v = task1.RemoveDuplicates(digits)
-	// output, _ := json.Marshal(digits)
-	// fmt.Printf("input:%s output:%s expect:%d resut:%d \n", string(input), string(output), 5, v)
-
-	input := 10
-	task2.Add(&input)
-	fmt.Printf("task.Add input 10,expect 20,result:%d \n", input)
 }
