@@ -1,25 +1,37 @@
 package main
 
 import (
+	"fmt"
 	"go-learn/task2"
 )
 
 func main() {
-	// input := 10
-	// task2.Add(&input)
-	// fmt.Printf("task.Add input 10,expect 20,result:%d \n", input)
+	c := task2.Circle{
+		Radius: 1,
+	}
+	r := task2.Rectangle{
+		Width:  1,
+		Length: 2,
+	}
+	fmt.Printf("Circle area: %f,Perimeter:%f \n", c.Area(), c.Perimeter())
+	fmt.Printf("Rectangle area:%f,Perimeter:%f \n", r.Area(), r.Perimeter())
 
-	// arr := make([]int, 0)
-	// arr = append(arr, 1)
-	// arr = append(arr, 2)
-	// arr = append(arr, 3)
-	// v, _ := json.Marshal(arr)
+	e := task2.Employee{
+		Person: task2.Person{
+			Age:  12,
+			Name: "Employee",
+		},
+		EmployeeID: 123,
+	}
+	e.PrintInfo()
 
-	// task2.SilencOpt(&arr)
-
-	// r, _ := json.Marshal(arr)
-	// fmt.Printf("before:%s,after:%s", string(v), string(r))
-
-	task2.TaskSchedule()
-
+	e1 := task2.Employee1{
+		//匿名嵌套初始化这一步和非匿名嵌套是一样的
+		Person: task2.Person{
+			Age:  12,
+			Name: "Employee1",
+		},
+		EmployeeID: 123,
+	}
+	e1.PrintInfo()
 }
