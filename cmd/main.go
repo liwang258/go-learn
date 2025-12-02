@@ -34,5 +34,7 @@ func main() {
 	// }
 	// e1.PrintInfo()
 	// task2.ChannelWithNoBuffer()
-	task2.ChannelWithBuffer()
+	//task2.ChannelWithBuffer()
+	task2.Lock()
+	task2.NoLock()
 }
