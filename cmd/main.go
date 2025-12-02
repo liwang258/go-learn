@@ -20,6 +20,6 @@ func main() {
 	// r, _ := json.Marshal(arr)
 	// fmt.Printf("before:%s,after:%s", string(v), string(r))
 
-	task2.Goroutine_Print()
+	task2.TaskSchedule()
 
 }
