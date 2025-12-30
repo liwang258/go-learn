@@ -16,28 +16,28 @@ func AddUser(name string) (int, error) {
 	if err := gorm.G[User](db).Create(db.Statement.Context, &user); err != nil {
 		return 0, err
 	} else {
-		return user.Id, nil
+		return int(user.ID), nil
 	}
 }
 
 func AddPost(user User, content string) (int, error) {
 	post := Post{
 		Content: content,
-		UserId:  user.Id,
+		UserId:  int(user.ID),
 	}
 	db := ConnectDb()
 	CreateTable(db, &Post{})
 	if err := gorm.G[Post](db).Create(db.Statement.Context, &post); err != nil {
 		return 0, err
 	} else {
-		return post.Id, nil
+		return int(post.ID), nil
 	}
 }
 
 func AddComment(user User, postId int, comment string) bool {
 	c := Comment{
 		Comment: comment,
-		UserId:  user.Id,
+		UserId:  int(user.ID),
 		PostId:  postId,
 	}
 	db := ConnectDb()
@@ -52,7 +52,7 @@ func AddComment(user User, postId int, comment string) bool {
 func DeleteCommet(user User, postId int) bool {
 	db := ConnectDb()
 	if _, err := gorm.G[Comment](db.Unscoped()).
-		Where("u_id=? and post_id=?", user.Id, user.Id).
+		Where("u_id=? and post_id=?", user.ID, postId).
 		Delete(context.Background()); err == nil {
 		return true
 	} else {

@@ -1,0 +1,14 @@
+# 数据库配置
+database:
+  driver: "mysql"          # 数据库驱动
+  dsn: "root:mysql@tcp(127.0.0.1:33066)/test_db?charset=utf8mb4&parseTime=True&loc=Local"  # 连接串
+  max_open_conns: 100      # 最大打开连接数
+  max_idle_conns: 20       # 最大空闲连接数
+  conn_max_lifetime: 3600  # 连接最大存活时间（秒）
+
+# 其他业务配置
+app:
+  name: "my-blogs"        # 应用名称
+  log_level: "info"        # 日志级别
+  timeout: 30              # 接口超时时间（秒）
+  port: 8080               # 服务端口
